@@ -52,7 +52,7 @@ def get_T(gamma):
     p_min = max([p for p in p_list if p < gamma])
     p_max = min([p for p in p_list if p > gamma])
 
-    return p_list.index(p_max) + intervals_length * (p_max - gamma) / (p_max - p_min)
+    return intervals_length - intervals_length * (p_min - gamma) / (p_min - p_max)
 
 
 def probability_of_unfail(time):
